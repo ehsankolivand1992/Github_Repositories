@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
 import android.util.Log
+import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.liveData
 import com.ehsankolivand.githubrepositories.base.BaseActivity
@@ -25,6 +26,8 @@ import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding>() {
+
+    private val mainViewModel:MainViewModel by viewModels()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
