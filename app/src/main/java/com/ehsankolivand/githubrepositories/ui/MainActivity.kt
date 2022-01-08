@@ -26,6 +26,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
 
 
+
+
         mainViewModel.fetchRep().observe(this, Observer {
             when (it.status) {
                 Status.SUCCESS -> {
