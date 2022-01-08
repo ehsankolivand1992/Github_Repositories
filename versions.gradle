@@ -1,0 +1,100 @@
+def libs = [:]
+ext.Libs = libs
+
+def versions = [
+        ktlint: "0.40.0",
+]
+versions.navigationVersion = "2.4.0-alpha02"
+versions.roomVersion = "2.4.0"
+versions.coroutinesVersion = "1.4.2"
+versions.lifecycleVersion = "2.2.0"
+versions.daggerVersion = "2.38.1"
+versions.retrofitVersion = "2.9.0"
+versions.okhttpVersion = "4.9.0"
+versions.glideVersion = "4.11.0"
+versions.material = "1.3.0"
+
+
+libs.androidx = [
+        "core"            : 'androidx.core:core-ktx:1.7.0',
+        "appcompat"       : 'androidx.appcompat:appcompat:1.4.0',
+        "material"        : 'com.google.android.material:material:1.4.0',
+        "constraintlayout": 'androidx.constraintlayout:constraintlayout:2.1.2',
+        "junit"           : 'junit:junit:4.+',
+        "androidxext"     : 'androidx.test.ext:junit:1.1.3',
+        "espresso"        : 'androidx.test.espresso:espresso-core:3.4.0'
+]
+
+libs.classpaths = [
+        "gradle_tools"   : "com.android.tools.build:gradle:7.0.4",
+        "gradle_plugin"  : "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.20",
+        "ktlint_gradle"  : "org.jlleitschuh.gradle:ktlint-gradle:10.2.1",
+        "dagger_plugin"  : 'com.google.dagger:hilt-android-gradle-plugin:2.38.1',
+        "safeArgs_gradle": "androidx.navigation:navigation-safe-args-gradle-plugin:$versions.navigationVersion",
+
+]
+
+
+libs.room = [
+        "ktx"     : "androidx.room:room-ktx:$versions.roomVersion",
+        "compiler": "androidx.room:room-compiler:$versions.roomVersion",
+        "test"    : "androidx.room:room-testing:$versions.roomVersion",
+        "runtime" : "androidx.room:room-runtime:$versions.roomVersion"
+]
+
+
+libs.coroutines = [
+        "core"   : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$versions.coroutinesVersion",
+        "android": "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutinesVersion",
+        "test"   : "org.jetbrains.kotlinx:kotlinx-coroutines-test:$versions.coroutinesVersion"
+]
+
+
+libs.lifecycle = [
+        "extensions"       : "androidx.lifecycle:lifecycle-extensions:$versions.lifecycleVersion",
+        "viewmodel"        : "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycleVersion",
+        "compiler"         : "androidx.lifecycle:lifecycle-common-java8:$versions.lifecycleVersion",
+        "lifeCycleLiveData": "androidx.lifecycle:lifecycle-livedata-ktx:$versions.lifecycleVersion",
+        "lifeCycleRunTime" : "androidx.lifecycle:lifecycle-runtime-ktx:$versions.lifecycleVersion"
+]
+
+
+libs.navigation = [
+        "navigationFragment": "androidx.navigation:navigation-fragment-ktx:$versions.navigationVersion",
+        "navigationKtx"     : "androidx.navigation:navigation-ui-ktx:$versions.navigationVersion",
+]
+
+
+libs.hilt = [
+        "viewmodel"       : "androidx.hilt:hilt-lifecycle-viewmodel:$versions.daggerVersion",
+        "compiler"        : "androidx.hilt:hilt-compiler:$versions.daggerVersion",
+        "android"         : "com.google.dagger:hilt-android:$versions.daggerVersion",
+        "android_compiler": "com.google.dagger:hilt-android-compiler:$versions.daggerVersion",
+        "gradlePlugin"    : "com.google.dagger:hilt-android-gradle-plugin:$versions.daggerVersion",
+]
+
+
+libs.retrofit = [
+        "main"         : "com.squareup.retrofit2:retrofit:$versions.retrofitVersion",
+        "converterGSON": "com.squareup.retrofit2:converter-gson:$versions.retrofitVersion",
+]
+
+
+libs.okHttp = [
+        "main"               : "com.squareup.okhttp3:okhttp:$versions.okhttpVersion",
+        "logging_interceptor": "com.squareup.okhttp3:logging-interceptor:$versions.okhttpVersion",
+        "mockWebServer"      : "com.squareup.okhttp3:mockwebserver:$versions.okhttpVersion"
+]
+
+
+libs.glide = [
+        "runtime"           : "com.github.bumptech.glide:glide:$versions.glideVersion",
+        "compiler"          : "com.github.bumptech.glide:compiler:$versions.glideVersion",
+        "okhttp_integration": "com.github.bumptech.glide:okhttp3-integration:$versions.glideVersion",
+]
+
+
+libs.material = [
+        "material": "com.google.android.material:material:$versions.material"
+]
+

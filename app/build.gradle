@@ -1,0 +1,85 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+apply plugin: 'dagger.hilt.android.plugin'
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.ehsankolivand.githubrepositories"
+        minSdk 26
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding = true
+        buildConfig = true
+    }
+}
+
+dependencies {
+
+    implementation Libs.androidx.core
+    implementation Libs.androidx.appcompat
+    implementation Libs.androidx.material
+    implementation Libs.androidx.constraintlayout
+    testImplementation Libs.androidx.junit
+    androidTestImplementation Libs.androidx.androidxext
+    androidTestImplementation Libs.androidx.espresso
+
+    implementation Libs.coroutines.core
+    implementation Libs.coroutines.android
+    testImplementation Libs.coroutines.test
+
+
+    implementation Libs.lifecycle.extensions
+    implementation Libs.lifecycle.viewmodel
+    kapt Libs.lifecycle.compiler
+    implementation Libs.lifecycle.lifeCycleLiveData
+    implementation Libs.lifecycle.lifeCycleRunTime
+
+    implementation Libs.hilt.android
+    kapt Libs.hilt.android_compiler
+
+
+    implementation Libs.retrofit.main
+    implementation Libs.retrofit.converterGSON
+
+
+    implementation Libs.okHttp.main
+    implementation Libs.okHttp.logging_interceptor
+    testImplementation Libs.okHttp.mockWebServer
+
+
+    implementation Libs.material.material
+
+    implementation Libs.room.ktx
+    kapt Libs.room.compiler
+    implementation Libs.room.runtime
+    testImplementation Libs.room.test
+
+    implementation Libs.navigation.navigationFragment
+    implementation Libs.navigation.navigationKtx
+
+}
