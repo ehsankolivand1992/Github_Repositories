@@ -27,15 +27,28 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding>() {
 
-    private val mainViewModel:MainViewModel by viewModels()
+    private val mainViewModel: MainViewModel by viewModels()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+
+        mainViewModel.fetchRep().observe(this, Observer {
+            when (it.status) {
+                Status.SUCCESS -> {
+
+                }
+                Status.ERROR -> {
+
+                }
+                Status.LOADING -> {
+
+                }
+            }
+        })
     }
 
-    override fun setBinding(): ActivityMainBinding
-    = ActivityMainBinding.inflate(layoutInflater)
+    override fun setBinding(): ActivityMainBinding = ActivityMainBinding.inflate(layoutInflater)
 }
 

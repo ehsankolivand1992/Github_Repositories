@@ -16,7 +16,7 @@ class MainViewModel @Inject constructor(val githubRepository: GithubRepository):
     val repo: LiveData<List<RepoSearchResponse>> = _repo
 
 
-     suspend fun fetchRep()
+      fun fetchRep()
          = liveData(Dispatchers.IO) {
             emit(Resource.loading(data = null))
             try {
