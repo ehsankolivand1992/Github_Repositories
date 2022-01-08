@@ -5,7 +5,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.wolvec.dimn.mvvmkotlin.model.User
+import com.ehsankolivand.githubrepositories.data_source.models.User
 
 @Dao
 interface UserDao {

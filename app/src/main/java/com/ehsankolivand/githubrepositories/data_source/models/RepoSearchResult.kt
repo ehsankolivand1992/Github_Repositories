@@ -1,8 +1,8 @@
-package com.wolvec.dimn.mvvmkotlin.model
+package com.ehsankolivand.githubrepositories.data_source.models
 
 import androidx.room.Entity
 import androidx.room.TypeConverters
-import com.wolvec.dimn.mvvmkotlin.db.GithubTypeConverters
+import com.ehsankolivand.githubrepositories.data_source.local.GithubTypeConverters
 
 @Entity(primaryKeys = ["query"])
 @TypeConverters(GithubTypeConverters::class)

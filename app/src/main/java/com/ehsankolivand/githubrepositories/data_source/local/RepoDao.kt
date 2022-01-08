@@ -9,9 +9,9 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.wolvec.dimn.mvvmkotlin.model.Contributor
-import com.wolvec.dimn.mvvmkotlin.model.Repo
-import com.wolvec.dimn.mvvmkotlin.model.RepoSearchResult
+import com.ehsankolivand.githubrepositories.data_source.models.Contributor
+import com.ehsankolivand.githubrepositories.data_source.models.Repo
+import com.ehsankolivand.githubrepositories.data_source.models.RepoSearchResult
 import java.util.*
 
 @Dao

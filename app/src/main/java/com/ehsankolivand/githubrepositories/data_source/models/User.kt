@@ -1,4 +1,4 @@
-package com.wolvec.dimn.mvvmkotlin.model
+package com.ehsankolivand.githubrepositories.data_source.models
 
 import androidx.room.Entity
 import com.google.gson.annotations.SerializedName

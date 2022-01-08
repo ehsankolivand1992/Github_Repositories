@@ -1,4 +1,4 @@
-package com.wolvec.dimn.mvvmkotlin.model
+package com.ehsankolivand.githubrepositories.data_source.models
 
 import com.google.gson.annotations.SerializedName
 
