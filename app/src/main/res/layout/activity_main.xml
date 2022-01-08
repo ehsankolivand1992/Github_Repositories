@@ -24,7 +24,6 @@
             android:iconifiedByDefault="false"
             android:imeOptions="actionDone|flagNoExtractUi"
             android:queryBackground="@color/transparent"
-            android:queryHint="Search cocktail"
             android:searchHintIcon="@null"
             android:searchIcon="@null" />
 
